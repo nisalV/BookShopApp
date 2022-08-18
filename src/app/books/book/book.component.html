@@ -2,6 +2,6 @@
     <img [src]="book.image" [alt]="book.name" width="100"/>
     <p class="title">{{ book.name | titlecase }} by {{ book.author | titlecase }}</p> 
     <p class="currency">{{book.amount | currency: 'LKR. ' }}</p>
-    <button  *ngIf="!isInCart"  (click)="addToCart()">Add to cart</button>
-    <button *ngIf="isInCart" (click)="removeFromCart()">Remove from cart</button>
+    <button class="p-1 px-3 rounded-md bg-purple-800 text-white" *ngIf="!isInCart"  (click)="addToCart()">Add to cart</button>
+    <button class="p-1 px-3 rounded-md bg-purple-800 text-white" *ngIf="isInCart" (click)="removeFromCart()">Remove from cart</button>
 </li>
